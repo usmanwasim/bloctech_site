@@ -74,7 +74,7 @@ export default function ContactUs() {
                   >
                     Say something to start a conversation!
                   </Typography>
-                  <Box sx={{ my: { xs: 3, sm: 4, md: 5 } }}>
+                  <Box sx={{ mt: { xs: 2, sm: 3, md: 4 } }}>
                     <Typography
                       variant="p"
                       sx={{
@@ -88,7 +88,7 @@ export default function ContactUs() {
                       contact@bloctechsolutions.com
                       <br />
                     </Typography>
-                    <Typography
+                    {/* <Typography
                       variant="p"
                       sx={{
                         fontFamily: "jost",
@@ -99,7 +99,7 @@ export default function ContactUs() {
                       }}
                     >
                       Phone (+92)03138604818
-                    </Typography>
+                    </Typography> */}
                   </Box>
                   <Stack direction="row" spacing={2} my={2}>
                     <PhoneInTalkIcon
@@ -118,7 +118,7 @@ export default function ContactUs() {
                       (+92)03138604818
                     </Typography>
                   </Stack>
-                  <Stack direction="row" spacing={2} my={2}>
+                  {/* <Stack direction="row" spacing={2} my={2}>
                     <EmailIcon
                       sx={{ color: `${theme.palette.text.anticolor}` }}
                     />
@@ -134,8 +134,8 @@ export default function ContactUs() {
                     >
                       demo@gmail.com
                     </Typography>
-                  </Stack>
-                  <Stack direction="row" spacing={2} my={2}>
+                  </Stack> */}
+                  {/* <Stack direction="row" spacing={2} my={2}>
                     <LocationOnIcon
                       sx={{ color: `${theme.palette.text.anticolor}` }}
                     />
@@ -152,13 +152,13 @@ export default function ContactUs() {
                       132 Dartmouth Street Boston,
                       <br /> Massachusetts 02156 United States
                     </Typography>
-                  </Stack>
+                  </Stack> */}
                   <Stack
                     direction="row"
                     spacing={1}
                     mt={{ xs: 3, sm: 4, md: 5 }}
                   >
-                    <Box
+                    {/* <Box
                       sx={{
                         width: { xs: "25px", sm: "30px" },
                         height: { xs: "25px", sm: "30px" },
@@ -169,7 +169,7 @@ export default function ContactUs() {
                         alt=""
                         style={{ width: "100%", height: "100%" }}
                       />
-                    </Box>
+                    </Box> */}
                     <Box
                       sx={{
                         width: { xs: "25px", sm: "30px" },
@@ -206,7 +206,7 @@ export default function ContactUs() {
                         style={{ width: "100%", height: "100%" }}
                       />
                     </Box>
-                    <Box
+                    {/* <Box
                       sx={{
                         width: { xs: "25px", sm: "30px" },
                         height: { xs: "25px", sm: "30px" },
@@ -217,7 +217,7 @@ export default function ContactUs() {
                         alt=""
                         style={{ width: "100%", height: "100%" }}
                       />
-                    </Box>
+                    </Box> */}
                   </Stack>
                 </Box>
               </Grid>

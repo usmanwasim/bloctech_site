@@ -70,11 +70,18 @@ const Footer = () => {
                       (item, i) => {
                         return (
                           <Box
-                            display="flex"
-                            alignItems="left"
+                            // display="flex"
+                            // alignItems="left"
                             gap={1}
                             mt={1}
                             key={i}
+                            sx={{
+                              display: "flex",
+                              justifyContent: {
+                                xs: "center",
+                                lg: "flex-start",
+                              },
+                            }}
                           >
                             <Typography
                               sx={{
@@ -111,11 +118,18 @@ const Footer = () => {
                     ].map((item, i) => {
                       return (
                         <Box
-                          display="flex"
-                          alignItems="left"
+                          // display="flex"
+                          // alignItems="left"
                           gap={1}
                           mt={1}
                           key={i}
+                          sx={{
+                            display: "flex",
+                            justifyContent: {
+                              xs: "center",
+                              lg: "flex-start",
+                            },
+                          }}
                         >
                           <Typography
                             sx={{
@@ -135,7 +149,7 @@ const Footer = () => {
                   </Box>
                 </Box>
               </Grid>
-              <Grid item lg={4} md={6} sm={12} xs={12}>
+              {/* <Grid item lg={4} md={6} sm={12} xs={12}>
                 <Box textAlign="right">
                   <Typography
                     sx={{
@@ -162,7 +176,7 @@ const Footer = () => {
                     <Image src={footer2} alt="footer2" />
                   </Box>
                 </Box>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Box>
         </Box>

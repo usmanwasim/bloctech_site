@@ -74,7 +74,7 @@ const AboutCompany = () => {
                     mt: 2,
                   }}
                 >
-                  4 Years of Blockchain Development Expertise
+                  6 Years of Blockchain Development Expertise
                 </Typography>
 
                 <Typography

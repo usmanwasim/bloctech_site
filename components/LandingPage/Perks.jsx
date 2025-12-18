@@ -23,7 +23,12 @@ const Perks = () => {
         </Typography>
 
         <Box mt={10}>
-          <Box display={"flex"} gap={3} flexWrap={"wrap"}>
+          <Box
+            display={"flex"}
+            gap={3}
+            flexWrap={"wrap"}
+            justifyContent={"center"}
+          >
             {[1, 2, 3, 4].map((item, i) => {
               return (
                 <Box
