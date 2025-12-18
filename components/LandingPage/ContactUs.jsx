@@ -10,7 +10,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import EmailIcon from "@mui/icons-material/Email";
@@ -27,6 +27,15 @@ import medium from "../../assets/landingPage/contactUs/medium.svg";
 
 export default function ContactUs() {
   const theme = useTheme();
+  const [state, setState] = useState({
+    first: "",
+    last: "",
+    email: "",
+    number: "",
+    company: "",
+    message: "",
+    agree: false,
+  });
   return (
     <>
       <Box width="100%" mt={{ xs: 5, sm: 7, md: 10 }} mb={{ xs: 3, sm: 4 }}>
@@ -175,6 +184,12 @@ export default function ContactUs() {
                         width: { xs: "25px", sm: "30px" },
                         height: { xs: "25px", sm: "30px" },
                       }}
+                      onClick={() =>
+                        window.open(
+                          "https://www.instagram.com/bloctechsolutions/",
+                          "_blank"
+                        )
+                      }
                     >
                       <Image
                         src={instagram}
@@ -187,6 +202,12 @@ export default function ContactUs() {
                         width: { xs: "25px", sm: "30px" },
                         height: { xs: "25px", sm: "30px" },
                       }}
+                      onClick={() =>
+                        window.open(
+                          "https://www.facebook.com/BlocTechSolutions",
+                          "_blank"
+                        )
+                      }
                     >
                       <Image
                         src={facebook}
@@ -199,6 +220,12 @@ export default function ContactUs() {
                         width: { xs: "25px", sm: "30px" },
                         height: { xs: "25px", sm: "30px" },
                       }}
+                      onClick={() =>
+                        window.open(
+                          "https://www.linkedin.com/company/bloctech-solution",
+                          "_blank"
+                        )
+                      }
                     >
                       <Image
                         src={linkedIn}
@@ -242,6 +269,13 @@ export default function ContactUs() {
                       </Typography>
                       <InputBase
                         placeholder="First Name"
+                        value={state.first}
+                        onChange={(e) =>
+                          setState((prev) => ({
+                            ...prev,
+                            first: e.target.value,
+                          }))
+                        }
                         sx={{
                           width: "100%",
                           color: `${theme.palette.text.secondary}`,
@@ -264,6 +298,13 @@ export default function ContactUs() {
                       </Typography>
                       <InputBase
                         placeholder="Last Name"
+                        value={state.last}
+                        onChange={(e) =>
+                          setState((prev) => ({
+                            ...prev,
+                            last: e.target.value,
+                          }))
+                        }
                         sx={{
                           width: "100%",
                           color: `${theme.palette.text.secondary}`,
@@ -292,6 +333,13 @@ export default function ContactUs() {
                       </Typography>
                       <InputBase
                         placeholder="Email"
+                        value={state.email}
+                        onChange={(e) =>
+                          setState((prev) => ({
+                            ...prev,
+                            email: e.target.value,
+                          }))
+                        }
                         sx={{
                           width: "100%",
                           color: `${theme.palette.text.secondary}`,
@@ -314,6 +362,13 @@ export default function ContactUs() {
                       </Typography>
                       <InputBase
                         placeholder="Phone Number"
+                        value={state.number}
+                        onChange={(e) =>
+                          setState((prev) => ({
+                            ...prev,
+                            number: e.target.value,
+                          }))
+                        }
                         sx={{
                           width: "100%",
                           color: `${theme.palette.text.secondary}`,
@@ -331,6 +386,13 @@ export default function ContactUs() {
                     <Box sx={{ width: "100%" }}>
                       <InputBase
                         placeholder="Your company / Organization"
+                        value={state.company}
+                        onChange={(e) =>
+                          setState((prev) => ({
+                            ...prev,
+                            company: e.target.value,
+                          }))
+                        }
                         sx={{
                           width: "100%",
                           color: `${theme.palette.text.secondary}`,
@@ -342,6 +404,13 @@ export default function ContactUs() {
                     <Box sx={{ width: "100%" }}>
                       <InputBase
                         placeholder="Share your requirement"
+                        value={state.message}
+                        onChange={(e) =>
+                          setState((prev) => ({
+                            ...prev,
+                            message: e.target.value,
+                          }))
+                        }
                         sx={{
                           width: "100%",
                           color: `${theme.palette.text.secondary}`,
@@ -361,6 +430,10 @@ export default function ContactUs() {
                     }}
                   >
                     <Checkbox
+                      checked={state.agree}
+                      onChange={(e) =>
+                        setState({ ...state, agree: e.target.checked })
+                      }
                       size="12px"
                       sx={{
                         width: { xs: "12px", sm: "14px", md: "14px" },
@@ -402,6 +475,17 @@ export default function ContactUs() {
                         textTransform: "capitalize",
                         p: "5px 20px",
                       }}
+                      onClick={() =>
+                        setState({
+                          first: "",
+                          last: "",
+                          email: "",
+                          number: "",
+                          company: "",
+                          message: "",
+                          agree: false,
+                        })
+                      }
                     >
                       Submit
                     </Button>
